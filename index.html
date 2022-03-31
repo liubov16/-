@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<!-- язык -->
+<html lang="ru">
+
+<head>
+	<!-- кодировки и мета-->
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- шрифти + оптимизатор загрузки -->
+	<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Play:wght@400;700&display=swap"
+		rel="stylesheet">
+	<!-- стили -->
+	<link rel="stylesheet" href="css/style.css">
+	<!-- заголовок страницы -->
+	<title>Изготовление металлоконструкций</title>
+</head>
+
+<body>
+	<div class="container">
+		<!-- шаг 1 -->
+		<div id="form-1" class="form__1" action="#" method="get">
+			<h2>Для каких целей Вам нужно здание?</h2>
+			<div class="form__content">
+				<div class="buildings__row">
+					<div class="buildings__column">
+						<input type="radio" class="buildings__input" value="1" name="buildings-input">
+						<div id="img-1" class="buildings__img"></div>
+						<h6 class="buildings__h6">Складское помещение</h6>
+					</div>
+					<div class="buildings__column">
+						<input type="radio" class="buildings__input" value="2" name="buildings-input">
+						<div id="img-2" class="buildings__img"></div>
+						<h6 class="buildings__h6">Ангар</h6>
+					</div>
+					<div class="buildings__column">
+						<input type="radio" class="buildings__input" value="3" name="buildings-input">
+						<div id="img-3" class="buildings__img"></div>
+						<h6 class="buildings__h6">Павильон</h6>
+					</div>
+					<div class="buildings__column">
+						<input type="radio" class="buildings__input" value="4" name="buildings-input">
+						<div id="img-4" class="buildings__img"></div>
+						<h6 class="buildings__h6">Промышленные здания</h6>
+					</div>
+				</div>
+
+				<div class="buildings__row">
+					<div class="buildings__column">
+						<input type="radio" class="buildings__input" value="5" name="buildings-input">
+						<div id="img-5" class="buildings__img"></div>
+						<h6 class="buildings__h6">Торговое помещение</h6>
+					</div>
+					<div class="buildings__column">
+						<input type="radio" class="buildings__input" value="6" name="buildings-input">
+						<div id="img-6" class="buildings__img"></div>
+						<h6 class="buildings__h6">Монтаж металлоконструкций</h6>
+					</div>
+					<div class="buildings__column">
+						<input type="radio" class="buildings__input" value="7" name="buildings-input">
+						<div id="img-7" class="buildings__img"></div>
+						<h6 class="buildings__h6">Лестницы, перила, ограждения</h6>
+					</div>
+					<div class="buildings__column">
+						<input type="radio" class="buildings__input" value="8" name="buildings-input">
+						<div id="img-8" class="buildings__img"></div>
+						<h6 class="buildings__h6">Плазменная резка</h6>
+					</div>
+				</div>
+			</div>
+
+			<!-- низ формы -->
+			<div id="bottom-1" class="form__bottom">
+				<button id="back-1" class="button__back first-child">назад</button>
+				<div class="steps">1/7</div>
+				<button id="next-1" class="button__next">Далее</button>
+			</div>
+		</div>
+
+		<!-- шаг 2 -->
+		<div id="form-2" class="form__2 hidden" action="#" method="get">
+			<h2>Есть ли у Вас готовый фундамент под здание?</h2>
+			<div class="form__content">
+				<div class="radio">
+					<p class="first-child"><input class="input__radio" type="radio" name="input-2"> Есть</p>
+					<p><input class="input__radio" type="radio" name="input-2"> Нет, нужен фундамент</p>
+				</div>
+			</div>
+
+			<!-- низ формы -->
+			<div id="bottom-2" class="form__bottom">
+				<button id="back-2" class="button__back">назад</button>
+				<div class="steps">2/7</div>
+				<button id="next-2" class="button__next">Далее</button>
+			</div>
+		</div>
+
+		<!-- шаг 3 -->
+		<div id="form-3" class="form__3 hidden" action="#" method="get">
+			<h2>Какой размер объекта планируется?</h2>
+
+			<div class="form__content">
+				<div class="size__row">
+					<h6 class="size__h6">Длина (м)</h6>
+					<input type="range" class="input__range" min="0" max="250" step="1" value="0"
+						oninput="range(input_range_1)">
+					<div class="size__minirow">
+						<p class="input__range-value"></p>
+						<p>0</p>
+						<p>250+</p>
+					</div>
+				</div>
+				<div class="size__row">
+					<h6 class="size__h6">Ширина (м)</h6>
+					<input type="range" class="input__range" min="0" max="250" step="1" value="0"
+						oninput="range(input_range_2)">
+					<div class="size__minirow">
+						<p class="input__range-value"></p>
+						<p>0</p>
+						<p>250+</p>
+					</div>
+				</div>
+				<div class="size__row">
+					<h6 class="size__h6">Высота (м)</h6>
+					<input type="range" class="input__range" min="0" max="25" step="1" value="0"
+						oninput="range(input_range_3)">
+					<div class="size__minirow">
+						<p class="input__range-value"></p>
+						<p>0</p>
+						<p>25+</p>
+					</div>
+				</div>
+				<div class="size__row">
+					<p><input class="input__radio" type="radio"> Еще не определились с размером</p>
+				</div>
+			</div>
+
+			<!-- низ формы -->
+			<div id="bottom-3" class="form__bottom">
+				<button id="back-3" class="button__back">назад</button>
+				<div class="steps">3/7</div>
+				<button id="next-3" class="button__next">Далее</button>
+			</div>
+		</div>
+
+		<!-- шаг 4 -->
+		<div id="form-4" class="form__4 hidden" action="#" method="get">
+			<h2>Вам нужно утеплённое или неутеплённое здание?</h2>
+			<div class="form__content">
+				<div class="radio">
+					<p class="first-child"><input class="input__radio" type="radio" name="input-4"> Утепленное</p>
+					<p><input class="input__radio" type="radio" name="input-4"> Неутепленное</p>
+				</div>
+			</div>
+
+			<!-- низ формы -->
+			<div id="bottom-4" class="form__bottom">
+				<button id="back-4" class="button__back">назад</button>
+				<div class="steps">4/7</div>
+				<button id="next-4" class="button__next">Далее</button>
+			</div>
+		</div>
+
+		<!-- шаг 5 -->
+		<div id="form-5" class="form__5 hidden" action="#" method="get">
+			<h2>Выберите тип кровли</h2>
+			<div class="form__content">
+				<div class="crovl__row">
+					<div class="crovl__column">
+						<input type="radio" class="buildings__input" value="1" name="crovl-input"><img id="img-9"
+							src="img/одно.png" alt="СтройСтальКубань" title="СтройСтальКубань" class="crovl__img">
+						<h6 class="crovl__h6">Односкатная</h6>
+					</div>
+					<div class="crovl__column">
+						<input type="radio" class="buildings__input" value="2" name="crovl-input"><img id="img-10"
+							src="img/дво.png" alt="СтройСтальКубань" title="СтройСтальКубань" class="crovl__img">
+						<h6 class="crovl__h6">Двухскатная</h6>
+					</div>
+					<div class="crovl__column">
+						<input type="radio" class="buildings__input" value="3" name="crovl-input"><img id="img-11"
+							src="img/арочная.png" alt="СтройСтальКубань" title="СтройСтальКубань" class="crovl__img">
+						<h6 class="crovl__h6">Арочная</h6>
+					</div>
+				</div>
+			</div>
+
+			<!-- низ формы -->
+			<div id="bottom-5" class="form__bottom">
+				<button id="back-5" class="button__back">назад</button>
+				<div class="steps">5/7</div>
+				<button id="next-5" class="button__next">Далее</button>
+			</div>
+		</div>
+
+		<!-- шаг 6 -->
+		<div id="form-6" class="form__6 hidden" action="#" method="get">
+			<h2>Укажите количество ворот</h2>
+			<div class="form__content">
+				<div class="size__row">
+					<h6 class="size__h6">Ворот</h6>
+					<input type="range" class="input__range" min="0" max="50" step="1" value="0"
+						oninput="range(input_range_4)">
+					<div class="size__minirow">
+						<p class="input__range-value"></p>
+						<p>0</p>
+						<p>50</p>
+					</div>
+				</div>
+				<div class="size__row">
+					<h6 class="size__h6">Дверей</h6>
+					<input type="range" class="input__range" min="0" max="50" step="1" value="0"
+						oninput="range(input_range_5)">
+					<div class="size__minirow">
+						<p class="input__range-value"></p>
+						<p>0</p>
+						<p>50</p>
+					</div>
+				</div>
+				<div class="size__row">
+					<h6 class="size__h6">Окон</h6>
+					<input type="range" class="input__range" min="0" max="50" step="1" value="0"
+						oninput="range(input_range_6)">
+					<div class="size__minirow">
+						<p class="input__range-value"></p>
+						<p>0</p>
+						<p>50</p>
+					</div>
+				</div>
+				<div class="size__row">
+					<p><input class="input__radio" type="radio"> Еще не определились с размером</p>
+				</div>
+			</div>
+
+			<!-- низ формы -->
+			<div id="bottom-6" class="form__bottom">
+				<button id="back-6" class="button__back">назад</button>
+				<div class="steps">6/7</div>
+				<button id="next-6" class="button__next">Далее</button>
+			</div>
+		</div>
+	</div>
+
+	<!-- шаг 7 -->
+	<div id="form-7" class="form__7 hidden" action="#" method="get">
+		<div class="container">
+			<!-- поле ввода пользователя -->
+			<div class="user__data">
+				<h5 class="user__h5">Получите индивидуальный расчет стоимости вашего объекта</h5>
+				<h6 class="user__h6">Заполните форму и наш менеджер свяжется с вами</h6>
+
+				<input type="text" placeholder="Ваше имя" class="user__input">
+				<input type="text" placeholder="Ваш телефон" class="user__input">
+				<input type="text" placeholder="Ваш email" class="user__input">
+
+				<button class="user__button">Получить расчет</button>
+				<h6 class="user__h6">Нажимая на кнопку, вы даете согласие на обработку своих персональных данных и
+					соглашаетесь с Пользовательским соглашением</h6>
+			</div>
+
+			<!-- низ формы -->
+			<div class="user__bottom">
+				<img src="img/company.jpg" alt="logo" title="СтройСтальКубань" class="user__img">
+				<div class="user__contact">
+					<img src="img/phone.png" alt="" class="user__icon">
+					<div class="contact__text">
+						<p><a class="contact__link" href="#">+380000000000</a></p>
+						<p>mail@gmail.com</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- script JS -->
+	<script src="js/script.js"></script>
+</body>
+
+</html>
